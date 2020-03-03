@@ -1,6 +1,6 @@
 from flask import Flask, send_file
-from camera import capture_image_to_file
-import os
+# from camera import capture_image_to_file
+# import os
 from constants import *
 import socket
 app = Flask(__name__)
@@ -18,7 +18,8 @@ def get_help():
 
 @app.route('/image')
 def get_image():
-    if os.path.exists(IMAGE_PATH):
-        os.remove(IMAGE_PATH)
-    capture_image_to_file(IMAGE_PATH)
-    return send_file(IMAGE_PATH)
+    # TODO - replace this with proper server code
+    # if os.path.exists(SERVER_IMAGE_PATH):
+    #     os.remove(SERVER_IMAGE_PATH)
+    # capture_image_to_file(SERVER_IMAGE_PATH)
+    return send_file(SERVER_IMAGE_PATH)

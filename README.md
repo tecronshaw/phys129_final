@@ -35,6 +35,16 @@ open Terminal and run the following:
 ```text
 $ git clone https://github.com/tecronshaw/phys129_final.git
 $ cd phys129_final
+$ nano constants.py
+```
+
+Replace the hostname 'localhost' (underneath the comment that reads '# TODO - REPLACE THIS WITH THE PROPER HOSTNAME')
+with the hostname of the server computer running the web application.
+Press Ctl-X and y to exit and save.
+
+Continue with the following commands:
+
+```text
 $ pip install -r requirements.txt
 $ python client.py --help
 ```
