@@ -13,6 +13,7 @@ See http://web.physics.ucsb.edu/~rpi/rpi_install.txt for setting up a Raspberry 
 Once that is done, login to your Pi and run the following commands in Terminal:
 
 ```text
+$ cd ~
 $ git clone https://github.com/tecronshaw/phys129_final.git
 $ cd phys129_final
 $ pip install -r requirements.txt
@@ -29,17 +30,18 @@ performs an image analysis algorithm specified by the user as an argument and di
 
 ### Setup
 
-On a different machine on the same network as the Pi (or just on the Pi again for testing),
+On a different machine on the same network as the Pi (or just on the Pi for testing purposes),
 open Terminal and run the following:
 
 ```text
-$ git clone https://github.com/tecronshaw/phys129_final.git
+$ cd ~
+$ git clone https://github.com/tecronshaw/phys129_final.git   # skip if on same Pi
 $ cd phys129_final
 $ nano constants.py
 ```
 
 Replace the hostname 'localhost' (underneath the comment that reads '# TODO - REPLACE THIS WITH THE PROPER HOSTNAME')
-with the hostname of the server computer running the web application.
+with the hostname of the Pi running the web application.
 Press Ctl-X and y to exit and save.
 
 Continue with the following commands:
@@ -51,7 +53,13 @@ $ python client.py --help
 
 This should display a help dialog that allows you to run the client.py script as desired.
 
-As an example, in that same Terminal window run `python client.py sobel`.
+As an example, in that same Terminal window run any of the following:
+
+```text
+$ python client.py sobel
+$ python client.py blur
+$ python client.py cluster
+```
 
 ### Adding Algorithms
 

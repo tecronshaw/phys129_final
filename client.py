@@ -34,7 +34,7 @@ def run(algorithm_name):
     Performs the following:
         - Send request to web app to capture image and download
         - Run algorithm on image based on algorithm name
-        - Display result of algorithm
+        - Display result of algorithm next to original image for comparison
 
     :param algorithm_name:
     """
